@@ -1,0 +1,4 @@
+how to start it?
+1.go to mongodb and the account is ita.
+2.go to frontend and enter npm run dev.
+3.go to backend and enter npm run server.

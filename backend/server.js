@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import cors from "cors";
 // const app=express();
 import dotenv from "dotenv";
 dotenv.config();
@@ -18,7 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth",authRoutes)
 app.use("/api/messages",messageRoutes);
-app.use("/api/users",userRoutes)
+app.use("/api/users",userRoutes);
+app.use(cors);
 
 app.use(express.static(path.join(__dirname,"/frontend/dist")))
 
